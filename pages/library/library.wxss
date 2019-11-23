@@ -1,0 +1,93 @@
+/* pages/library/library.wxss */
+
+.wrap {
+  margin-top: 120rpx;
+}
+
+.fenlei {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+  font-size: 40rpx;
+  box-sizing: border-box;
+  z-index: 999;
+  background-color: #e5e5e5;
+}
+
+.fenleiwrap {
+  width: 100%;
+  margin-top: 80rpx;
+}
+
+.fenlei .left {
+  width: 110rpx;
+  height: 110rpx;
+}
+
+.fenlei .middle {
+  display: flex;
+}
+
+.fenlei .middle text {
+  display: block;
+  width: 110rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  font-weight: bold;
+  color: #1296db;
+  border: 1px solid #333;
+}
+
+.fenlei .right {
+  display: flex;
+  align-items: center;
+  width: 110rpx;
+  height: 110rpx;
+}
+
+.fenlei .right image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.describeScenery {
+  width: 100%;
+  padding: 20rpx 30rpx 0 30rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.topCategory {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 35rpx;
+}
+
+.more {
+  font-size: 30rpx;
+  font-weight: normal;
+}
+
+.secondCategory {
+  width: 80%;
+  margin: 60rpx auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.secondCategory text {
+  width: 120rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  padding: 20rpx 0;
+  font-size: 30rpx;
+}

@@ -1,0 +1,16 @@
+<!--pages/library/author-detail/author-detail.wxml-->
+<view class="authordetail">
+  <!-- 作者简介 -->
+  <view class="authorinfo">
+    <text>作者简介</text>
+    <view style="text-indent:1em;">{{authordetail.authDetails.authorIntroduce}}</view>
+  </view>
+
+  <view class="authorinfo">
+    <text>作品列表</text><text>({{authordetail.productCount}})</text>
+    <view bindtap="golibrarydetail" data-text="{{item}}" class="listdetail" wx:for="{{authordetail.productList}}">
+      <view class="poetrytit">{{item.productName}}</view>
+      <view>{{item.productContent}}</view>
+    </view>
+  </view>
+</view>

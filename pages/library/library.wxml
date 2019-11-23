@@ -1,0 +1,44 @@
+<!--pages/library/library.wxml-->
+<view class="wrap">
+  <!-- 分类导航 -->
+  <view class='fenlei'>
+    <view class="left"></view>
+    <view class="middle">
+      <text class='fenlei-fenlei' bindtap='show_fenlei' style='color:{{showfenlei?"#1296db":"#666"}};border-right:none;'>分类</text>
+      <text class='fenlei-chaodai' bindtap='show_chaodai' style='color:{{showfenlei?"#666":"#1296db"}}'>朝代</text>
+    </view>
+
+    <view class="right" bindtap="tosearchpage">
+    <image src="/images/search.png"/>
+    </view>
+
+  </view>
+  <!-- 分类内容 -->
+  <view class="fenleiwrap">
+    <!-- 普通分类 -->
+    <view class="describeScenery" wx:for="{{wenkuputong}}" wx:if="{{showfenlei}}">
+      <view class='topCategory'>
+        <text>{{item.catlogOneName}}</text>
+        <text wx:if="{{item.products.length>8}}" class='more' catchtap='librarymore' data-text='{{item}}' data-index="{{index}}">更多></text>
+      </view>
+      <view class='secondCategory'>
+        <block wx:for="{{item.products}}" wx:key="" wx:if="{{index<8}}">
+          <text catchtap='gopoetrylist' data-text='{{item}}'>{{item.catlogTwoName}}</text>
+        </block>
+      </view>
+    </view>
+    <!-- 朝代分类 -->
+    <view class="describeScenery" wx:for="{{wenkuchaodai}}" wx:if="{{!showfenlei}}">
+      <view class='topCategory'>
+        <text>{{item.reignName}}</text>
+        <text wx:if="{{item.authors.length>8}}" class='more' catchtap='librarymore' data-text='{{item}}' data-index="{{index}}">更多></text>
+      </view>
+      <view class='secondCategory'>
+        <block wx:for="{{item.authors}}" wx:if="{{index<8}}">
+          <text catchtap='gopoetrylistbyauthor' data-text='{{item}}'>{{item.authorName}}</text>
+        </block>
+      </view>
+    </view>
+  </view>
+
+</view>

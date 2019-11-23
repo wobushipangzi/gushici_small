@@ -1,0 +1,32 @@
+/* pages/library/author-detail/author-detail.wxss */
+page{
+  width: 100%;
+}
+.authordetail{
+  width: 100%;
+  padding: 0 35rpx;
+  box-sizing: border-box;
+  text-align: justify;
+}
+.authorinfo{
+  margin-bottom: 20rpx;
+}
+.authorinfo text{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-weight: bold;
+  font-size: 35rpx;
+  text-align: left !important;
+  padding: 20rpx 0;
+}
+.authorinfo .listdetail{
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  padding: 30rpx 0;
+}
+.authorinfo .listdetail .poetrytit{
+  width: 100%;
+  margin: 0 auto;
+  font-size: 40rpx;
+}

@@ -1,0 +1,17 @@
+<!--pages/library/library-list/library-list.wxml-->
+<view>
+  <view class='toptitle'>
+    <text>作品</text>
+    <text>创作</text>
+  </view>
+  <view class='cont-list' wx:for="{{poetrylist}}" catchtap='golibrarydetail' data-text='{{item}}'>
+    <view class='poetry-title'>
+      <text class='timu'>{{item.productName}}</text>
+      <text>【{{item.reignName}}】{{item.authorName}}</text>
+    </view>
+    <text class='poetry-cont'>{{item.productContent}}</text>
+  </view>
+
+
+
+</view>

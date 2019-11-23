@@ -1,0 +1,8 @@
+<!--pages/library/library-more/library-more.wxml-->
+<!--pages/library/library.wxml-->
+<view>
+  <view class="putongfenlei">
+    <text wx:if="{{chaodai}}" data-text="{{item}}" catchtap='gopoetrylistbyauthor' wx:for="{{wenkuputong}}">{{item.authorName}}</text>
+    <text wx:if="{{!chaodai}}" data-text="{{item}}" catchtap='gopoetrylistbyputong' wx:for="{{wenkuputong}}">{{item.catlogTwoName}}</text>
+  </view>
+</view>

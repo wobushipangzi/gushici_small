@@ -1,0 +1,82 @@
+/* pages/library/library-search/library-search.wxss */
+
+input {
+  width: 75%;
+  margin: 0 auto;
+  height: 80rpx;
+  border-radius: 50rpx;
+  background-color: #eee;
+  margin-top: 50rpx;
+  padding: 0 50rpx;
+  box-sizing: border;
+}
+
+.search-btn {
+  display: flex;
+  margin-bottom: 50rpx;
+}
+
+button {
+  width: 165rpx;
+  margin-top: 25rpx;
+}
+
+.zuozhelist {
+  box-sizing: border;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  height: 180rpx;
+}
+
+.zuozhelist view {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding:0 30rpx;
+  box-sizing: border-box;
+}
+.zuozhelist .one{
+  justify-content: space-between;
+}
+.zuozhelist text {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 20rpx;
+}
+
+.zuozhelist .authorName {
+  font-size: 40rpx;
+}
+
+.zuopinlist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 0 30rpx;
+  height: 200rpx;
+}
+
+.zuopinlist .zuopinlist-son {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.zuopinlist .zuopinlist-son view {
+  padding: 20rpx;
+}
+
+.zuopinlist .zuopinlist-son .zuopinlist-son-topleft {
+  text-align: left;
+  font-size: 40rpx;
+}
+
+.zuopinlist .zuopinlist-son .zuopinlist-son-topright {
+  width: 280rpx;
+  text-align: right;
+}

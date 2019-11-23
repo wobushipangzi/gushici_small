@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/forum/forum",
+    "pages/library/library",
+    "pages/library/library-list/library-list",
+    "pages/library/library-list/library-detail/library-detail",
+    "pages/library/library-list/library-comment/library-comment",
+    "pages/library/author-detail/author-detail",
+    "pages/library/library-more/library-more",
+    "pages/library/library-search/library-search",
+    "pages/mine/mine"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "新火诗词",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/forum/forum",
+        "iconPath": "images/forum.png",
+        "selectedIconPath": "images/forum-sel.png",
+        "text": "论坛"
+      },
+      {
+        "pagePath": "pages/library/library",
+        "iconPath": "images/library.png",
+        "selectedIconPath": "images/library-sel.png",
+        "text": "文库"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine-sel.png",
+        "text": "我的"
+      }
+    ],
+    "selectedColor": "#1296db"
+  },
+  "sitemapLocation": "sitemap.json"
+}

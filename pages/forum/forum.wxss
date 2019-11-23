@@ -1,0 +1,142 @@
+/**forum.wxss**/
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+button {
+  margin-top: 300rpx;
+}
+
+/* text{
+    margin-top: 300rpx;
+} */
+
+.fenlei {
+  display: flex;
+  justify-content: center;
+  height: 100rpx;
+}
+
+.fenlei text {
+  width: 100rpx;
+  height: 50rpx;
+  border: 1px solid #aaa;
+  text-align: center;
+}
+
+.fenlei .tuijian {
+  border-right: none;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20rpx;
+}
+
+.top image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.top .top_left {
+  visibility: hidden;
+}
+/* 列表项 */
+
+.listItem{
+  border-bottom: 1px solid #e5e5e5;
+}
+/* 头像部分 */
+
+.avatar {
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+}
+
+.avatar .avatar_left {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.avatar .avatar_left image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.avatar_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 30rpx;
+  height: 150rpx;
+ padding: 20rpx 0;
+ box-sizing: border-box;
+  }
+  .avatar_right .name{
+ display: flex;
+ align-items: center;
+ font-size: 30rpx;
+  }
+.avatar_right .name .zhiliang{
+  width: 34rpx;
+  height: 34rpx;
+  border: 1px solid #aaa;
+  margin-left: 30rpx;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 34rpx;
+  }
+  .avatar_right .date{
+  color: #666;
+  font-size: 30rpx;
+  }
+/* 说说部分 */
+.cont{
+  padding: 0 70rpx;
+}
+.cont .saySome{
+  padding: 20rpx 10rpx 40rpx 10rpx;
+  font-size: 35rpx;
+}
+.cont .someImage{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50rpx；
+}
+.cont image{
+  width: 200rpx;
+  height: 200rpx;
+  padding-top: 1a0rpx;
+}
+/* 收藏 点赞 评论 */
+.comment{
+  display: flex;
+  padding: 0 60rpx;
+}
+.comment image{
+  width: 60rpx;
+  height: 60rpx;
+  padding: 20rpx;
+}

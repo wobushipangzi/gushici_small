@@ -1,0 +1,105 @@
+/* pages/library/library-list/library-comment/library-comment.wxss */
+
+.comment {
+  width: 100%;
+}
+
+.comment .commentMain {
+  width: 100%;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.comment .replyMain {
+  width: 100%;
+  padding: 0rpx 30rpx 25rpx 100rpx;
+  box-sizing: border-box;
+}
+
+
+
+.commentTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30rpx;
+}
+.comment .replyMain .replyTop{
+ margin-bottom: 5rpx;
+}
+.commentTop .headPhotoUrl {
+  display: flex;
+  align-items: center;
+}
+
+.commentTop .headPhotoUrl image {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+}
+.replyTop .headPhotoUrl image {
+  width: 55rpx;
+  height: 55rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+}
+.commentTop .praise {
+  width: 80rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.commentTop .praise .commentorName {
+  color: #999;
+  font-size: 25rpx;
+}
+
+.commentTop .praise image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.commentCont {
+  width: 100%;
+}
+
+.commentCont .commentCont-commentTime {
+  color: #999;
+  font-size: 25rpx;
+}
+
+.maoreReply .reply {
+  width: 100%;
+  padding: 0rpx 30rpx 0 100rpx;
+  box-sizing: border-box;
+  color: #999;
+}
+
+.maoreReply .reply .expandResponse {
+  position: relative;
+  left: 55rpx;
+  width: 200rpx;
+  text-align: center;
+}
+
+.maoreReply view::before {
+  content: '';
+  position: absolute;
+  right: -50rpx;
+  top: 18rpx;
+  width: 50rpx;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.maoreReply view::after {
+  content: '';
+  position: absolute;
+  left: -50rpx;
+  top: 18rpx;
+  width: 50rpx;
+  border-bottom: 2px solid #e5e5e5;
+}

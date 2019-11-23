@@ -1,0 +1,16 @@
+/* pages/library/library-more/library-more.wxss */
+page{
+  width: 100%;
+}
+.putongfenlei{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 30rpx;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+.putongfenlei text{
+ font-size: 35rpx;
+ padding: 30rpx;
+}

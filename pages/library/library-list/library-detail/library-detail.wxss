@@ -1,0 +1,115 @@
+/* pages/library/library-list/library-detail/library-detail.wxss */
+
+page {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.detail-poetry {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail-poetry .poe-tit {
+  font-size: 50rpx;
+  font-weight: bold;
+  padding: 20rpx 0;
+}
+
+.detail-poetry .poe-aut {
+  padding-bottom: 20rpx;
+}
+
+.detail-poetry .poe-main {
+  width: 70%;
+  line-height: 50rpx;
+}
+
+/* 译文  注释  解析 */
+
+.tran-tit {
+  width: 100%;
+  padding: 30rpx 30rpx 20rpx 30rpx;
+  margin-top: 20rpx;
+  box-sizing: border-box;
+}
+
+.tran-tit text {
+  font-weight: bold;
+  padding: 0 30rpx;
+}
+
+.yiwen {
+  width: 100%;
+  padding: 0 58rpx;
+  box-sizing: border-box;
+  text-align: justify;
+}
+
+.fenlei {
+  display: flex;
+}
+
+.fenlei view {
+  height: 40rpx;
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 20rpx;
+  margin-right: 25rpx;
+}
+
+/* 底部分享收藏 */
+
+.detail-btm {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20rpx 20rpx;
+  box-sizing: border-box;
+}
+
+.detail-btm image {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.detail-btm .collectimg {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.comment {
+  position: relative;
+  width: 50%;
+  text-align: center;
+}
+
+.comment text {
+  display: block;
+  background-color: #333;
+  border-radius: 50%;
+  color: #fff;
+  position: absolute;
+  top: -18rpx;
+  left: 230rpx;
+  width: 35rpx;
+  height: 35rpx;
+  text-align: center;
+  line-height: 35rpx;
+  font-size: 20rpx;
+}
+
+scroll-view {
+  height: 90%;
+}

@@ -1,0 +1,51 @@
+<!--forum.wxml-->
+<view class="container">
+  <!-- 顶部 -->
+  <view class="top">
+    <view class="top_left">
+      <image src="/images/plus.png"></image>
+    </view>
+    <view class="fenlei">
+      <text class="item">推荐</text>
+      <text>关注</text>
+    </view>
+    <view class="top_right">
+      <image src="/images/plus.png"></image>
+    </view>
+  </view>
+
+  <view class="listItem" wx:for="{{tuijian}}">
+  <!-- 头像 -->
+  <view class="avatar">
+    <view class="avatar_left">
+      <image src="{{item.headPhoto}}"></image>
+    </view>
+    <view class="avatar_right">
+      <view class="name">
+        <text>{{item.userName}}</text>
+        <view class="zhiliang" wx:if="{{item.isGood}}">精</view>
+      </view>
+      <view class="date">{{item.suibiTime}}</view>
+    </view>
+  </view>
+  <!-- 内容 -->
+  <view class="cont">
+    <view class="saySome">{{item.content}}</view>
+    <view class="someImage" >
+      <image src="{{image}}" bindtap="imgYu" data-id="{{item.suibiId}}" data-src="{{image}}" wx:for="{{item.imgList}}" wx:for-item="image"></image>
+    </view>
+  </view>
+  <!-- 收藏 点赞 评论 -->
+  <view class="comment">
+    <image src="/images/praise.png"></image>
+    <image src="/images/collect3.png"></image>
+    <image src="/images/comment.png"></image>
+  </view>
+  </view>
+  
+
+  <!-- <view class="userinfo">
+    <button wx:if='{{isShow}}' open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 信息授权</button>
+     <text wx:elif="{{!isShow}}">识时务者为俊杰</text>
+  </view> -->
+</view>

@@ -1,0 +1,44 @@
+<!--pages/library/library-list/library-comment/library-comment.wxml-->
+<view>
+  <view class="comment" wx:for="{{commentData}}" wx:key="key">
+    <view class="commentMain">
+      <view class="commentTop">
+        <view class="headPhotoUrl">
+          <image src="{{item.headPhotoUrl}}"></image>
+          <text class="commentorName">{{item.name}}</text>
+        </view>
+        <view class="praise" catchtap="praise" data-index="{{index}}" data-text='{{item}}'>
+          <image wx:if="{{!item.isPraised}}" src="/images/praise.png"></image>
+          <image wx:if="{{item.isPraised}}" src="/images/praise3.png"></image>
+          <text class="commentorName">{{item.praiseCount}}</text>
+        </view>
+      </view>
+      <view class="commentCont">
+        <text class="commentCont-content" decode="true">{{item.content}}&nbsp;&nbsp;&nbsp;&nbsp;</text>
+        <text class="commentCont-commentTime">{{item.commentTime}}</text>
+      </view>
+    </view>
+    <view wx:if="{{item.replyCount}}" class="maoreReply">
+    <view class="reply">
+     <view class="expandResponse"  catchtap="expandResponse" data-text="{{item}}" data-index="{{index}}">展开{{item.replyCount}}条回复</view>
+    </view>
+      <view wx:for="{{replyData}}" wx:key="key" class="commentMain replyMain">
+        <view class="commentTop replyTop">
+           <view class="headPhotoUrl">
+            <image src="{{item.fromHeadPhotoUrl}}"></image>
+            <text class="commentorName">{{item.fromName}}</text>
+          </view>
+          <view class="praise"  data-index="{{index}}" data-text='{{item}}'>
+            <image wx:if="{{!item.isPraised}}" src="/images/praise.png"></image>
+            <image wx:if="{{item.isPraised}}" src="/images/praise3.png"></image>
+            <text class="commentorName">{{item.praiseCount}}</text>
+          </view> 
+        </view>
+         <view class="commentCont">
+          <text class="commentCont-content" decode="true">{{item.content}}&nbsp;&nbsp;&nbsp;&nbsp;</text>
+          <text class="commentCont-commentTime">{{item.replyTime}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

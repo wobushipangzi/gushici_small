@@ -1,0 +1,39 @@
+<!--pages/library/library-search/library-search.wxml-->
+<view>
+  <input bindinput="bindKeyInput" placeholder="请输入关键词" placeholder-style="text-indent:10rpx;" />
+  <view class="search-btn">
+    <button bindtap="souzuozhe">搜作者</button>
+    <button bindtap="souzuopin">搜作品</button>
+  </view>
+  <view>
+    <view wx:if="{{showzuozhelist}}" class="zuozhelist" wx:for="{{zuozhedetail}}" bindtap="goauthordetail" data-text='{{item}}'>
+      <view class="one">
+        <text class="authorName">  {{item.authorName}}</text>
+        <text>  【{{item.reignName}}】</text>
+      </view>
+      <view class="two">
+        <text> {{item.authorZi}}</text>
+        <text>  {{item.authorHao}}</text>
+      </view>
+
+    </view>
+
+    <view wx:if="{{!showzuozhelist}}" class="zuopinlist" wx:for="{{zuopindetail}}" bindtap="golibrarydetail" data-text='{{item}}'>
+      <view class="zuopinlist-son">
+        <view class="zuopinlist-son-topleft">
+          <text> {{item.productName}}</text>
+        </view>
+        <view class="zuopinlist-son-topright">
+          <text>  【{{item.reignName}}】</text>
+          <text>  {{item.authorName}}</text>
+        </view>
+      </view>
+      <view class="zuopinlist-son">
+        <view class="zuopinlist-son-btm">
+          <text>  {{item.productContent}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

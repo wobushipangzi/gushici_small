@@ -1,0 +1,46 @@
+<!--pages/library/library-list/library-detail/library-detail.wxml-->
+<view class='wrap'>
+  <scroll-view scroll-y>
+    <view class='detail-poetry'>
+      <view class='poe-tit'>{{poetryData.productName}}</view>
+      <view class='poe-aut' catchtap='gopoetrylistbyauthor'>【{{poetryData.reignName}}】{{poetryData.authorName}}
+      </view>
+      <view class='poe-main'>{{poetryData.productContent}}</view>
+    </view>
+    <view class='detail-translation'>
+      <view class='tran-tit'>
+        <text class="yiwen" catchtap="handleyiwen">译文</text>
+        <text class="zhushi" catchtap="handlezhushi">注释</text>
+        <text class="jiexi" catchtap="handlejiexi">赏析</text>
+      </view>
+      <view wx:if="{{showyiwen}}" class='yiwen yiwen-main'>{{poetryData.productTranslate}}</view>
+      <view wx:if="{{showzhushi}}" class='yiwen zhushi-main'>{{poetryData.productAnnotation}}</view>
+      <view wx:if="{{showjiexi}}" class='yiwen jiexi-main'>{{poetryData.productEnjoy}}</view>
+    </view>
+    <view class='detail-translation'>
+      <view class='tran-tit'>
+        <text>作者</text>
+      </view>
+      <view class='yiwen'>{{poetryData.authorIntroduce}}</view>
+    </view>
+    <view class='detail-translation'>
+      <view class='tran-tit'>
+        <text>分类</text>
+      </view>
+      <view class='yiwen fenlei'>
+        <view wx:for="{{poetryData.catlogTwoNames}}" catchtap="gopoetrylist" data-text='{{item}}'>{{item.catlogTwoName}}</view>
+      </view>
+    </view>
+
+  </scroll-view>
+  <view class='detail-btm'>
+    <view class="comment" catchtap="collectpoetry">
+      <image wx:if="{{!isCollect}}" class="collectimg" src='/images/collect3.png'></image>
+      <image wx:if="{{isCollect}}" class="collectimg" src='/images/collect2.png'></image>
+    </view>
+    <view class="comment" catchtap="commentpoetry">
+      <image src='/images/comment.png'></image>
+      <text wx:if="{{commentCount}}">{{commentCount}}</text>
+    </view>
+  </view>
+</view>
